@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.scss";
+import classes from "./App.module.scss";
 
 function App() {
-  return <div className="App">asd</div>;
+  return <div className={classes.title}>Music Player</div>;
 }
 
 export default App;
