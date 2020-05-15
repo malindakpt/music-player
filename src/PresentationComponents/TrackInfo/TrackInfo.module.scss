@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+
+  .thumbnail {
+    padding: 20px;
+    img {
+      width: 100%;
+    }
+  }
+}
