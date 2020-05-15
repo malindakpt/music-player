@@ -13,7 +13,7 @@ export const PlayListEntry: React.FC<PlayListEntryProps> = ({
 }) => {
   return (
     <div className={classes.container} onClick={() => onSelect(track)}>
-      {track.name}
+      {track.metaData.title}
     </div>
   );
 };
