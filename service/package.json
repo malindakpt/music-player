@@ -1,0 +1,15 @@
+{
+  "name": "music-service",
+  "version": "1.0.0",
+  "description": "Serves mp3 files and list of mp3 files as json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Malinda K",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.2"
+  }
+}

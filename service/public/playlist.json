@@ -1,0 +1,29 @@
+[
+  {
+    "url": "http://localhost:3000/song1.mp3",
+    "metaData": {
+      "title": "Sambanda Api",
+      "artist": "Gunadasa Kapuge",
+      "album": "Udarata Niliya",
+      "thumbnailUrl": "img1.jpg"
+    }
+  },
+  {
+    "url": "http://localhost:3000/song2.mp3",
+    "metaData": {
+      "title": "Yaluwo Api",
+      "artist": "Malinda Kapuge",
+      "album": "Udarata Niliya",
+      "thumbnailUrl": "img1.jpg"
+    }
+  },
+  {
+    "url": "http://localhost:3000/song3.mp3",
+    "metaData": {
+      "title": "Mithuro Api",
+      "artist": "Ananda Kapuge",
+      "album": "Udarata Niliya",
+      "thumbnailUrl": "img1.jpg"
+    }
+  }
+]
