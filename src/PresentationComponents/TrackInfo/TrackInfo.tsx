@@ -6,12 +6,16 @@ export interface TrackInfoProps {
   trackMetaData?: TrackMetaData;
 }
 export const TrackInfo: React.FC<TrackInfoProps> = ({
-  trackMetaData = { title: "Select a track" },
+  trackMetaData = {
+    title: "Select a track",
+    artist: "Music Player",
+    album: "version 1.0.0",
+  },
 }) => {
   return (
     <div className={classes.container}>
       <div>
-        <div>{trackMetaData.title}</div>
+        <div className={classes.title}>{trackMetaData.title}</div>
         <div>{trackMetaData.artist}</div>
         <div>{trackMetaData.album}</div>
       </div>

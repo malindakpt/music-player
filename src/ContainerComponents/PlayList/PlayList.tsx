@@ -1,7 +1,7 @@
 import React from "react";
 import { Track } from "../../Model/Track";
 import { PlayListEntry } from "../../PresentationComponents/PlayListEntry/PlayListEntry";
-
+import classes from "./PlayList.module.scss";
 export interface PlayListProps {
   onTrackSelect: (track: Track) => void;
   trackList: Track[];
@@ -11,7 +11,7 @@ export const PlayList: React.FC<PlayListProps> = ({
   onTrackSelect,
 }) => {
   return (
-    <div>
+    <div className={classes.container}>
       {trackList.map((track) => (
         <PlayListEntry key={track.url} track={track} onSelect={onTrackSelect} />
       ))}
