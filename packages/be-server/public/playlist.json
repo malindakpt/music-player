@@ -3,7 +3,7 @@
     "id": 1,
     "url": "http://localhost:3001/songs/song1.mp3",
     "metaData": {
-      "title": "Enrique Iglesias - Bailamos",
+      "title": "Enrique Iglesias",
       "artist": "Enrique Iglesias",
       "album": "Iglesias",
       "thumbnailUrl": "http://localhost:3001/images/song1.png"
@@ -13,7 +13,7 @@
     "id": 2,
     "url": "http://localhost:3001/songs/song2.mp3",
     "metaData": {
-      "title": "Bambara Pahasa Labana Malak Do",
+      "title": "Bambara Pahasa",
       "artist": "Rukantha Gunathilake",
       "album": "Bambara Pahasa",
       "thumbnailUrl": "http://localhost:3001/images/song2.png"

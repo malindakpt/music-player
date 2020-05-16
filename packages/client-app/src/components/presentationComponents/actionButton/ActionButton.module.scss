@@ -5,6 +5,10 @@
   height: 25px;
   color: white;
 
+  &:hover {
+    background-color: #7f8fee;
+  }
+
   &.disabled {
     background-color: grey;
   }
