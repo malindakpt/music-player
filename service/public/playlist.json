@@ -5,7 +5,7 @@
       "title": "Sambanda Api",
       "artist": "Gunadasa Kapuge",
       "album": "Udarata Niliya",
-      "thumbnailUrl": "img1.jpg"
+      "thumbnailUrl": "http://localhost:3000/images/song1.png"
     }
   },
   {
@@ -14,7 +14,7 @@
       "title": "Yaluwo Api",
       "artist": "Malinda Kapuge",
       "album": "Udarata Niliya",
-      "thumbnailUrl": "img1.jpg"
+      "thumbnailUrl": "http://localhost:3000/images/song2.png"
     }
   },
   {
@@ -23,7 +23,7 @@
       "title": "Mithuro Api",
       "artist": "Ananda Kapuge",
       "album": "Udarata Niliya",
-      "thumbnailUrl": "img1.jpg"
+      "thumbnailUrl": "http://localhost:3000/images/song3.png"
     }
   }
 ]
