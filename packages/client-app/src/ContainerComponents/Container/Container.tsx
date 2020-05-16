@@ -11,7 +11,7 @@ export const Container: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/playlist.json")
+      .get("http://localhost:3001/playlist.json")
       .then((result) => setTrackList(result.data));
   }, []);
 
