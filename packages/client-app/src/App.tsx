@@ -1,8 +1,18 @@
-import React from "react";
-import { Container } from "./components/containerComponents/playerBase/PlayerBase";
+import React, { useState } from "react";
+import { PlayerBase } from "./components/containerComponents/playerBase/PlayerBase";
 
+export const AppContext = React.createContext({
+  currentSongIdx: -1,
+  setCurrentSongIdx: (idx: number) => {},
+});
 function App() {
-  return <Container />;
+  const [currentSongIdx, setCurrentSongIdx] = useState(-1);
+
+  return (
+    <AppContext.Provider value={{ currentSongIdx, setCurrentSongIdx }}>
+      <PlayerBase />
+    </AppContext.Provider>
+  );
 }
 
 export default App;

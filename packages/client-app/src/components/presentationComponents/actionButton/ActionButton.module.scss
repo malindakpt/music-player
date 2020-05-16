@@ -1,12 +1,11 @@
 .container {
   cursor: pointer;
   text-align: center;
-  background-color: black;
+  background-color: #3f51b5;
   height: 25px;
   color: white;
 
   &.disabled {
     background-color: grey;
-    color: rgb(173, 170, 170);
   }
 }

@@ -23,7 +23,7 @@
     "id": 3,
     "url": "http://localhost:3001/songs/song3.mp3",
     "metaData": {
-      "title": "Api Sanasille (Ukule_Lamade)",
+      "title": "Api Sanasille",
       "artist": "Sangeeth Wijesooriya",
       "album": "Ukule Lamade",
       "thumbnailUrl": "http://localhost:3001/images/song3.png"
@@ -53,7 +53,7 @@
     "id": 6,
     "url": "http://localhost:3001/songs/song6.mp3",
     "metaData": {
-      "title": "Saragaye_Raye",
+      "title": "Saragaye",
       "artist": "Sanuka Wickramasinghe",
       "album": "_ananmanan.lk",
       "thumbnailUrl": "http://localhost:3001/images/song3.png"
@@ -67,6 +67,46 @@
       "artist": "Senanayake Weraliyadda",
       "album": "Topsinhala mp3.lk",
       "thumbnailUrl": "http://localhost:3001/images/song1.png"
+    }
+  },
+  {
+    "id": 8,
+    "url": "http://localhost:3001/songs/song8.mp3",
+    "metaData": {
+      "title": "Gimhan kale",
+      "artist": "Enrique Iglesias",
+      "album": "Iglesias",
+      "thumbnailUrl": "http://localhost:3001/images/song1.png"
+    }
+  },
+  {
+    "id": 9,
+    "url": "http://localhost:3001/songs/song9.mp3",
+    "metaData": {
+      "title": "Hiru Mal Kiniththak",
+      "artist": "Rukantha Gunathilake",
+      "album": "Bambara Pahasa",
+      "thumbnailUrl": "http://localhost:3001/images/song2.png"
+    }
+  },
+  {
+    "id": 10,
+    "url": "http://localhost:3001/songs/song10.mp3",
+    "metaData": {
+      "title": "Gypsies Sal Mal",
+      "artist": "Wijesooriya",
+      "album": "Ukule Lamade",
+      "thumbnailUrl": "http://localhost:3001/images/song3.png"
+    }
+  },
+  {
+    "id": 11,
+    "url": "http://localhost:3001/songs/song11.mp3",
+    "metaData": {
+      "title": "Ra Ra sihinen",
+      "artist": "Wijesooriya",
+      "album": "Ukule Lamade",
+      "thumbnailUrl": "http://localhost:3001/images/song2.png"
     }
   }
 ]

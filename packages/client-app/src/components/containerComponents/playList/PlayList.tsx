@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Track } from "../../../model/Track";
 import { PlayListEntry } from "../../presentationComponents/playListEntry/PlayListEntry";
 import classes from "./PlayList.module.scss";
+import { AppContext } from "../../../App";
 export interface PlayListProps {
   onTrackSelect: (track: Track) => void;
   trackList: Track[];
@@ -10,21 +11,21 @@ export const PlayList: React.FC<PlayListProps> = ({
   trackList,
   onTrackSelect,
 }) => {
-  const [currentPlayId, setCurrentPlayId] = useState(-1);
+  const context = useContext(AppContext);
 
-  const handleOnSelectSong = (track: Track) => {
-    setCurrentPlayId(track.id);
+  const handleOnSelectSong = (idx: number, track: Track) => {
+    context.setCurrentSongIdx(idx);
     onTrackSelect(track);
   };
 
   return (
     <div className={classes.container}>
-      {trackList.map((track) => (
+      {trackList.map((track, idx) => (
         <PlayListEntry
           key={track.id}
           track={track}
-          onSelect={handleOnSelectSong}
-          isPlaying={currentPlayId === track.id}
+          onSelect={() => handleOnSelectSong(idx, track)}
+          isPlaying={context.currentSongIdx === idx}
         />
       ))}
     </div>

@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import classes from "./PlayerBase.module.scss";
 import { PlayList } from "../playList/PlayList";
 import { PlayerController } from "../playerController/PlayerController";
 import { Track } from "../../../model/Track";
 import { TrackInfo } from "../../presentationComponents/trackInfo/TrackInfo";
 import axios from "axios";
+import { AppContext } from "../../../App";
 
-export const Container: React.FC = () => {
+export const PlayerBase: React.FC = () => {
   const [trackList, setTrackList] = useState<Track[]>([]);
+  const context = useContext(AppContext);
 
   useEffect(() => {
     axios
@@ -17,17 +19,26 @@ export const Container: React.FC = () => {
 
   const [selectedTrack, setSelectedTrack] = useState<Track>();
 
-  const handleNext = () => {
+  const handleSelectNext = () => {
     let idx = trackList.findIndex((track) => track.url === selectedTrack?.url);
     if (trackList.length > ++idx) {
       setSelectedTrack(trackList[idx]);
+      context.setCurrentSongIdx(idx);
+    } else {
+      setSelectedTrack(trackList[0]);
+      context.setCurrentSongIdx(0);
     }
   };
 
-  const handlePrev = () => {
+  const handleSelectPrev = () => {
+    const trackSize = trackList.length;
     let idx = trackList.findIndex((track) => track.url === selectedTrack?.url);
     if (0 <= --idx) {
       setSelectedTrack(trackList[idx]);
+      context.setCurrentSongIdx(idx);
+    } else {
+      setSelectedTrack(trackList[trackSize - 1]);
+      context.setCurrentSongIdx(trackSize - 1);
     }
   };
 
@@ -38,8 +49,8 @@ export const Container: React.FC = () => {
           <TrackInfo trackMetaData={selectedTrack?.metaData} />
           <PlayerController
             url={selectedTrack?.url}
-            onNextSelect={handleNext}
-            onPrevSelect={handlePrev}
+            onNextSelect={handleSelectNext}
+            onPrevSelect={handleSelectPrev}
           />
         </div>
 
