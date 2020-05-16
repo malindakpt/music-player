@@ -6,7 +6,7 @@ export interface TrackInfoProps {
   trackMetaData?: TrackMetaData;
 }
 export const TrackInfo: React.FC<TrackInfoProps> = ({
-  trackMetaData = { title: "Please select a track" },
+  trackMetaData = { title: "Select a track" },
 }) => {
   return (
     <div className={classes.container}>
@@ -16,7 +16,9 @@ export const TrackInfo: React.FC<TrackInfoProps> = ({
         <div>{trackMetaData.album}</div>
       </div>
       <div className={classes.thumbnail}>
-        <img alt={trackMetaData.title} src={trackMetaData.thumbnailUrl} />
+        {trackMetaData.thumbnailUrl && (
+          <img alt={trackMetaData.title} src={trackMetaData.thumbnailUrl} />
+        )}
       </div>
     </div>
   );

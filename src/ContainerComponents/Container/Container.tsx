@@ -34,13 +34,16 @@ export const Container: React.FC = () => {
   return (
     <div className={classes.container}>
       <div className={classes.body}>
-        <TrackInfo trackMetaData={selectedTrack?.metaData} />
+        <div className={classes.songPlay}>
+          <TrackInfo trackMetaData={selectedTrack?.metaData} />
+          <PlayerController
+            url={selectedTrack?.url}
+            onNextSelect={handleNext}
+            onPrevSelect={handlePrev}
+          />
+        </div>
+
         <PlayList trackList={trackList} onTrackSelect={setSelectedTrack} />
-        <PlayerController
-          url={selectedTrack?.url}
-          onNextSelect={handleNext}
-          onPrevSelect={handlePrev}
-        />
       </div>
     </div>
   );
