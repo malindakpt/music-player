@@ -1,8 +1,10 @@
 .container {
   cursor: pointer;
-  color: blue;
   padding: 1px 5px;
   font-size: 14px;
+  background: green;
+  margin-bottom: 3px;
+  color: white;
 
   &:hover {
     color: white;

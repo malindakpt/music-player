@@ -11,8 +11,7 @@
 
   .thumbnail {
     display: grid;
-    place-content: center;
-    place-items: center;
+    place-items: end;
 
     img {
       height: 100%;
