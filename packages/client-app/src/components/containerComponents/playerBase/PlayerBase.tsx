@@ -13,7 +13,7 @@ export const PlayerBase: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/playlist.json")
+      .get(`${process.env.REACT_APP_SONG_SERVER_ADDR}/playlist.json`)
       .then((result) => setTrackList(result.data));
   }, []);
 
