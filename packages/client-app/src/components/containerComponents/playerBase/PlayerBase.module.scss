@@ -18,10 +18,12 @@
     grid-template-rows: 1fr;
     grid-template-columns: 3fr 1fr;
     border: solid;
+    overflow: hidden;
 
     @media only screen and (max-width: 800px) {
       grid-template-columns: 1fr;
       max-height: unset;
+      border: unset;
     }
 
     .songPlay {

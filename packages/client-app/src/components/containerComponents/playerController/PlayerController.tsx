@@ -26,7 +26,6 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
   );
 
   useEffect(() => {
-    setDuration(audio.current?.duration);
     audio.current && audio.current.load();
     // eslint-disable-next-line
   }, [url]);
@@ -36,7 +35,7 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
     audio.current.currentTime = 0;
   };
 
-  const handleProgressChange = (progress: number) => {
+  const handleProgressChangeFromSeek = (progress: number) => {
     setProgress(progress);
     if (audio.current) {
       audio.current.currentTime = progress;
@@ -45,6 +44,7 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
 
   const handleTimeUpdate = () => {
     if (audio.current) {
+      setDuration(audio.current?.duration);
       setProgress(audio.current.currentTime);
     }
   };
@@ -66,6 +66,7 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
           autoPlay
           ref={audio}
           onTimeUpdate={handleTimeUpdate}
+          onLoad={() => console.log("loaded")}
           onPlay={() => {
             setTogglePlayLabel(PlayPauseButtonLabel.PAUSE);
           }}
@@ -80,7 +81,7 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
         disabled={!url}
         duration={duration}
         progress={progress}
-        onProgressChange={handleProgressChange}
+        onProgressChange={handleProgressChangeFromSeek}
       />
       <div className={classes.actionButtons}>
         <ActionButton title="Stop" onClick={handleStop} disabled={!url} />
