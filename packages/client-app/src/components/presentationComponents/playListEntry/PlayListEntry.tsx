@@ -1,5 +1,5 @@
 import React from "react";
-import { Track } from "../../../model2/Track";
+import { Track } from "../../../model/Track";
 import classes from "./PlayListEntry.module.scss";
 import clsx from "clsx";
 

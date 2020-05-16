@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Track } from "../../../model2/Track";
+import { Track } from "../../../model/Track";
 import { PlayListEntry } from "../../presentationComponents/playListEntry/PlayListEntry";
 import classes from "./PlayList.module.scss";
 import { AppContext } from "../../../App";
