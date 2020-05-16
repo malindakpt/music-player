@@ -1,122 +1,72 @@
 [
   {
     "id": 1,
-    "url": "http://localhost:3000/song1.mp3",
+    "url": "http://localhost:3001/songs/song1.mp3",
     "metaData": {
-      "title": "Sambanda Api",
-      "artist": "Gunadasa Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song1.png"
+      "title": "Enrique Iglesias - Bailamos",
+      "artist": "Enrique Iglesias",
+      "album": "Iglesias",
+      "thumbnailUrl": "http://localhost:3001/images/song1.png"
     }
   },
   {
     "id": 2,
-    "url": "http://localhost:3000/song2.mp3",
+    "url": "http://localhost:3001/songs/song2.mp3",
     "metaData": {
-      "title": "Yaluwo Api",
-      "artist": "Malinda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song2.png"
+      "title": "Bambara Pahasa Labana Malak Do",
+      "artist": "Rukantha Gunathilake",
+      "album": "Bambara Pahasa",
+      "thumbnailUrl": "http://localhost:3001/images/song2.png"
     }
   },
   {
     "id": 3,
-    "url": "http://localhost:3000/song3.mp3",
+    "url": "http://localhost:3001/songs/song3.mp3",
     "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
+      "title": "Api Sanasille (Ukule_Lamade)",
+      "artist": "Sangeeth Wijesooriya",
+      "album": "Ukule Lamade",
+      "thumbnailUrl": "http://localhost:3001/images/song3.png"
     }
   },
   {
     "id": 4,
-    "url": "http://localhost:3000/song3.mp3",
+    "url": "http://localhost:3001/songs/song4.mp3",
     "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
+      "title": "Hitha hiri watunadoo",
+      "artist": "Ashanthi/ Bachi Susan",
+      "album": "Random Album",
+      "thumbnailUrl": "http://localhost:3001/images/song1.png"
     }
   },
   {
     "id": 5,
-    "url": "http://localhost:3000/song3.mp3",
+    "url": "http://localhost:3001/songs/song5.mp3",
     "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
+      "title": "Sepalikawo",
+      "artist": "-Shehan Kaushalya",
+      "album": "www.hirufm.lk",
+      "thumbnailUrl": "http://localhost:3001/images/song2.png"
     }
   },
   {
     "id": 6,
-    "url": "http://localhost:3000/song3.mp3",
+    "url": "http://localhost:3001/songs/song6.mp3",
     "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
+      "title": "Saragaye_Raye",
+      "artist": "Sanuka Wickramasinghe",
+      "album": "_ananmanan.lk",
+      "thumbnailUrl": "http://localhost:3001/images/song3.png"
     }
   },
   {
     "id": 7,
-    "url": "http://localhost:3000/song3.mp3",
+    "url": "http://localhost:3001/songs/song7.mp3",
     "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
-    }
-  },
-  {
-    "id": 8,
-    "url": "http://localhost:3000/song3.mp3",
-    "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
-    }
-  },
-  {
-    "id": 9,
-    "url": "http://localhost:3000/song3.mp3",
-    "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
-    }
-  },
-  {
-    "id": 10,
-    "url": "http://localhost:3000/song3.mp3",
-    "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
-    }
-  },
-  {
-    "id": 11,
-    "url": "http://localhost:3000/song3.mp3",
-    "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
-    }
-  },
-  {
-    "id": 12,
-    "url": "http://localhost:3000/song3.mp3",
-    "metaData": {
-      "title": "Mithuro Api",
-      "artist": "Ananda Kapuge",
-      "album": "Udarata Niliya",
-      "thumbnailUrl": "http://localhost:3000/images/song3.png"
+      "title": "Perum Puragena",
+      "artist": "Senanayake Weraliyadda",
+      "album": "Topsinhala mp3.lk",
+      "thumbnailUrl": "http://localhost:3001/images/song1.png"
     }
   }
 ]
