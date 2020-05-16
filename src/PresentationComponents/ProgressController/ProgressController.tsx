@@ -24,7 +24,13 @@ export const ProgressController: React.FC<ProgressControllerProps> = ({
     <div />
   ) : (
     <div className={classes.container}>
-      <LinearProgress variant="determinate" value={progressPercentage()} />
+      <LinearProgress
+        classes={{
+          root: classes.root,
+        }}
+        variant="determinate"
+        value={progressPercentage()}
+      />
       <Slider
         value={progress}
         disabled={disabled}
