@@ -13,7 +13,7 @@ export const PlayList: React.FC<PlayListProps> = ({
   return (
     <div className={classes.container}>
       {trackList.map((track) => (
-        <PlayListEntry key={track.url} track={track} onSelect={onTrackSelect} />
+        <PlayListEntry key={track.id} track={track} onSelect={onTrackSelect} />
       ))}
     </div>
   );
