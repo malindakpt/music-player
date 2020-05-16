@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./ActionButton.module.scss";
 
 export interface ActionButtonProps {
   title: string;
@@ -8,5 +9,9 @@ export const ActionButton: React.FC<ActionButtonProps> = ({
   onClick,
   title,
 }) => {
-  return <div onClick={onClick}>{title}</div>;
+  return (
+    <div className={classes.container} onClick={onClick}>
+      {title}
+    </div>
+  );
 };
