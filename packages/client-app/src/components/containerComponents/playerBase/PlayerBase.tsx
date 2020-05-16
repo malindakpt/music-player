@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import classes from "./PlayerBase.module.scss";
 import { PlayList } from "../playList/PlayList";
 import { PlayerController } from "../playerController/PlayerController";
-import { Track } from "../../../model/Track";
+import { Track } from "../../../model2/Track";
 import { TrackInfo } from "../../presentationComponents/trackInfo/TrackInfo";
 import axios from "axios";
 import { AppContext } from "../../../App";
