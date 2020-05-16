@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ActionButton } from "../../PresentationComponents/ActionButton/ActionButton";
-import { ProgressController } from "../ProgressController/ProgressController";
+import { ProgressController } from "../../PresentationComponents/ProgressController/ProgressController";
 import classes from "./PlayerController.module.scss";
 
 enum PlayPauseButtonLabel {
@@ -77,15 +77,20 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
         </audio>
       )}
       <ProgressController
+        disabled={!url}
         duration={duration}
         progress={progress}
         onProgressChange={handleProgressChange}
       />
       <div className={classes.actionButtons}>
-        <ActionButton title="Stop" onClick={handleStop} />
-        <ActionButton title="Prev" onClick={onPrevSelect} />
-        <ActionButton title={togglePlayLabel} onClick={handleTogglePlay} />
-        <ActionButton title="Next" onClick={onNextSelect} />
+        <ActionButton title="Stop" onClick={handleStop} disabled={!url} />
+        <ActionButton title="Prev" onClick={onPrevSelect} disabled={!url} />
+        <ActionButton
+          title={togglePlayLabel}
+          onClick={handleTogglePlay}
+          disabled={!url}
+        />
+        <ActionButton title="Next" onClick={onNextSelect} disabled={!url} />
       </div>
     </div>
   );
