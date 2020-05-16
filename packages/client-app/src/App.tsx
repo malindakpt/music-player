@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./ContainerComponents/Container/Container";
+import { Container } from "./components/containerComponents/playerBase/PlayerBase";
 
 function App() {
   return <Container />;

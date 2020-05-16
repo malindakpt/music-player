@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { ActionButton } from "../../PresentationComponents/ActionButton/ActionButton";
-import { ProgressController } from "../../PresentationComponents/ProgressController/ProgressController";
+import { ActionButton } from "../../presentationComponents/actionButton/ActionButton";
+import { ProgressController } from "../../presentationComponents/progressController/ProgressController";
 import classes from "./PlayerController.module.scss";
 
 enum PlayPauseButtonLabel {

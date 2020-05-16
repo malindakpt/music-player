@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./TrackInfo.module.scss";
-import { TrackMetaData } from "../../Model/TrackMetaData";
-import thumb from "../../Images/thumb.png";
+import { TrackMetaData } from "../../../model/TrackMetaData";
+import thumb from "../../../images/thumb.png";
 
 export interface TrackInfoProps {
   trackMetaData?: TrackMetaData;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import classes from "./Container.module.scss";
-import { PlayList } from "../PlayList/PlayList";
-import { PlayerController } from "../PlayerController/PlayerController";
-import { Track } from "../../Model/Track";
-import { TrackInfo } from "../../PresentationComponents/TrackInfo/TrackInfo";
+import classes from "./PlayerBase.module.scss";
+import { PlayList } from "../playList/PlayList";
+import { PlayerController } from "../playerController/PlayerController";
+import { Track } from "../../../model/Track";
+import { TrackInfo } from "../../presentationComponents/trackInfo/TrackInfo";
 import axios from "axios";
 
 export const Container: React.FC = () => {

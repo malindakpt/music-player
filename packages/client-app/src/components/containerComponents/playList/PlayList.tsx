@@ -1,6 +1,6 @@
 import React from "react";
-import { Track } from "../../Model/Track";
-import { PlayListEntry } from "../../PresentationComponents/PlayListEntry/PlayListEntry";
+import { Track } from "../../../model/Track";
+import { PlayListEntry } from "../../presentationComponents/playListEntry/PlayListEntry";
 import classes from "./PlayList.module.scss";
 export interface PlayListProps {
   onTrackSelect: (track: Track) => void;

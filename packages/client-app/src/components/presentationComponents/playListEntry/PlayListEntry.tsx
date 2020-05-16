@@ -1,5 +1,5 @@
 import React from "react";
-import { Track } from "../../Model/Track";
+import { Track } from "../../../model/Track";
 import classes from "./PlayListEntry.module.scss";
 
 export interface PlayListEntryProps {
