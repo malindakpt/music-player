@@ -52,6 +52,7 @@ export const PlayerBase: React.FC = () => {
           <TrackInfo trackMetaData={selectedTrack?.metaData} />
           <PlayerController
             url={selectedTrack?.url}
+            playListLength={trackList.length}
             onNextSelect={handleSelectNext}
             onPrevSelect={handleSelectPrev}
           />

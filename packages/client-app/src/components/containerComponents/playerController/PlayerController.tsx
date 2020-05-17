@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { ActionButton } from "../../presentationComponents/actionButton/ActionButton";
 import { ProgressController } from "../../presentationComponents/progressController/ProgressController";
 import classes from "./PlayerController.module.scss";
+import { AppContext } from "../../../App";
 
 enum PlayPauseButtonLabel {
   PLAY = "Play",
@@ -11,11 +12,13 @@ export interface PlayerControllerProps {
   url?: string;
   onNextSelect: () => void;
   onPrevSelect: () => void;
+  playListLength: number;
 }
 export const PlayerController: React.FC<PlayerControllerProps> = ({
   url,
   onNextSelect,
   onPrevSelect,
+  playListLength,
 }) => {
   // TODO Remove any type below
   let audio: any = React.createRef();
@@ -24,6 +27,7 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
   const [togglePlayLabel, setTogglePlayLabel] = useState(
     PlayPauseButtonLabel.PLAY
   );
+  const context = useContext(AppContext);
 
   useEffect(() => {
     audio.current && audio.current.load();
@@ -85,13 +89,21 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
       />
       <div className={classes.actionButtons}>
         <ActionButton title="Stop" onClick={handleStop} disabled={!url} />
-        <ActionButton title="Prev" onClick={onPrevSelect} disabled={!url} />
+        <ActionButton
+          title="Prev"
+          onClick={onPrevSelect}
+          disabled={!url || context.currentSongIdx === 0}
+        />
         <ActionButton
           title={togglePlayLabel}
           onClick={handleTogglePlay}
           disabled={!url}
         />
-        <ActionButton title="Next" onClick={onNextSelect} disabled={!url} />
+        <ActionButton
+          title="Next"
+          onClick={onNextSelect}
+          disabled={!url || context.currentSongIdx === playListLength - 1}
+        />
       </div>
     </div>
   );
