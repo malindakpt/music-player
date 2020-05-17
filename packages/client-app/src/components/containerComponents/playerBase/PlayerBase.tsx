@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import classes from "./PlayerBase.module.scss";
 import { PlayList } from "../playList/PlayList";
 import { PlayerController } from "../playerController/PlayerController";
@@ -22,7 +22,7 @@ export const PlayerBase: React.FC = () => {
 
   const [selectedTrack, setSelectedTrack] = useState<Track>();
 
-  const handleSelectNext = () => {
+  const handleSelectNext = useCallback(() => {
     let idx = trackList.findIndex((track) => track.url === selectedTrack?.url);
     if (trackList.length > ++idx) {
       setSelectedTrack(trackList[idx]);
@@ -31,9 +31,9 @@ export const PlayerBase: React.FC = () => {
       setSelectedTrack(trackList[0]);
       context.setCurrentSongIdx(0);
     }
-  };
+  }, [selectedTrack, trackList, context]);
 
-  const handleSelectPrev = () => {
+  const handleSelectPrev = useCallback(() => {
     const trackSize = trackList.length;
     let idx = trackList.findIndex((track) => track.url === selectedTrack?.url);
     if (0 <= --idx) {
@@ -43,7 +43,7 @@ export const PlayerBase: React.FC = () => {
       setSelectedTrack(trackList[trackSize - 1]);
       context.setCurrentSongIdx(trackSize - 1);
     }
-  };
+  }, [context, selectedTrack, trackList]);
 
   return (
     <div className={classes.container}>

@@ -10,7 +10,7 @@ export const TrackInfo: React.FC<TrackInfoProps> = ({
   trackMetaData = {
     title: "Select a song",
     artist: "Music Player",
-    album: "version 1.0.0",
+    album: "Test Version",
   },
 }) => {
   return (

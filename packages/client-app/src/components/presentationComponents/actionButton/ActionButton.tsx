@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import classes from "./ActionButton.module.scss";
 import clsx from "clsx";
 
@@ -12,9 +12,9 @@ export const ActionButton: React.FC<ActionButtonProps> = ({
   title,
   disabled,
 }) => {
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     !disabled && onClick();
-  };
+  }, [disabled, onClick]);
 
   return (
     <div

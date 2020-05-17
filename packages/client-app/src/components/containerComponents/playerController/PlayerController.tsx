@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import { ActionButton } from "../../presentationComponents/actionButton/ActionButton";
 import { ProgressController } from "../../presentationComponents/progressController/ProgressController";
 import classes from "./PlayerController.module.scss";
@@ -46,14 +46,14 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
     }
   };
 
-  const handleTimeUpdate = () => {
+  const handleTimeUpdate = useCallback(() => {
     if (audio.current) {
       setDuration(audio.current?.duration);
       setProgress(audio.current.currentTime);
     }
-  };
+  }, [audio]);
 
-  const handleTogglePlay = () => {
+  const handleTogglePlay = useCallback(() => {
     if (audio.current) {
       if (audio.current.paused) {
         audio.current.play();
@@ -61,7 +61,7 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
         audio.current.pause();
       }
     }
-  };
+  }, [audio]);
 
   return (
     <div className={classes.container}>

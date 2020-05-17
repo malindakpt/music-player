@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import Slider from "@material-ui/core/Slider";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import classes from "./ProgressController.module.scss";
@@ -15,9 +15,12 @@ export const ProgressController: React.FC<ProgressControllerProps> = ({
   duration,
   disabled,
 }) => {
-  const handleChange = (event: any, newValue: number | number[]) => {
-    onProgressChange(newValue as number);
-  };
+  const handleChange = useCallback(
+    (event: any, newValue: number | number[]) => {
+      onProgressChange(newValue as number);
+    },
+    [onProgressChange]
+  );
 
   const progressPercentage = () => (progress * 100) / duration;
   return disabled ? (

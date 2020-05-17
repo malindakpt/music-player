@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useCallback } from "react";
 import { Track } from "../../../model/Track";
 import { PlayListEntry } from "../../presentationComponents/playListEntry/PlayListEntry";
 import classes from "./PlayList.module.scss";
@@ -13,10 +13,13 @@ export const PlayList: React.FC<PlayListProps> = ({
 }) => {
   const context = useContext(AppContext);
 
-  const handleOnSelectSong = (idx: number, track: Track) => {
-    context.setCurrentSongIdx(idx);
-    onTrackSelect(track);
-  };
+  const handleOnSelectSong = useCallback(
+    (idx: number, track: Track) => {
+      context.setCurrentSongIdx(idx);
+      onTrackSelect(track);
+    },
+    [context, onTrackSelect]
+  );
 
   return (
     <div className={classes.container}>
