@@ -10,17 +10,14 @@ be-server and client-app individually
 ### Description
 
 There are two main compoents of this project<br />
-be-server: NodeJS file server which provide songs information.</br>
-client-app: React application.<br>
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+`be-server`: NodeJS file server which provide songs information.</br>
+`client-app`: React application.<br>
 
 ### Additional features of the application
-If backend is not available an error is shown in playlist.</br>
+If backend is not available, an error is shown in playlist.</br>
 All the components are wrapped by ErrorBoundary component to handle unexpected error status.</br>
-Selected song is displayed in playlist with blue background color</br>
-Once user is reached to the end of the playlist, next hit on the next button will play the first song<br>
+Selected/Current playing song is highlighted in the playlist with blue background color.</br>
+Playlist looping feature is added.<br>
 
 ### Notes
 
