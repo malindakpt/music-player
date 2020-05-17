@@ -88,7 +88,11 @@ export const PlayerController: React.FC<PlayerControllerProps> = ({
         onProgressChange={handleProgressChangeFromSeek}
       />
       <div className={classes.actionButtons}>
-        <ActionButton title="Stop" onClick={handleStop} disabled={!url} />
+        <ActionButton
+          title="Stop"
+          onClick={handleStop}
+          disabled={!url || PlayPauseButtonLabel.PLAY === togglePlayLabel}
+        />
         <ActionButton
           title="Prev"
           onClick={onPrevSelect}
