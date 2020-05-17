@@ -1,4 +1,4 @@
-![ArchitecturalDiagram](https://user-images.githubusercontent.com/1351502/82133477-397fe780-980a-11ea-941a-aad6022951cd.PNG)
+![ArchitecturalDiagram](https://user-images.githubusercontent.com/1351502/82134694-e6ad2c80-9817-11ea-8359-26c91ee9f63b.PNG)
 
 ## Run the project
 This project expect that you have globally installed [Lerna](https://lerna.js.org/).</br>
