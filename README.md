@@ -5,12 +5,12 @@ This project expect that you have globally installed [Lerna](https://lerna.js.or
 execute `lerna bootstrap` from root folder.<br />
 execute `lerna run start`</br>
 (Or you can navigate to packges folder and `npm install` and `npm start` both 
-be-server and client-app individually</br>
+be-server and client-app individually.</br>
 You can access the game from http://localhost:3002/
 
 ### Description
 
-There are two main compoents of this project<br />
+There are two main compoents of this project.<br />
 `be-server`: NodeJS file server which provide songs information.</br>
 `client-app`: React application.<br>
 
@@ -23,4 +23,6 @@ Playlist looping feature is added.<br>
 ### Notes
 
 `Unit tests` and `storybook stories` are not added due to time limitations.<br />
-`REACT_APP_SONG_SERVER_ADDR` variable in .env file can be used to connect application to different backend</be>
+`REACT_APP_SONG_SERVER_ADDR` variable in .env file can be used to connect application to different backend.</be>
+`Code comments` are added only for critial scenarios.
+.
