@@ -1,7 +1,7 @@
 ![ArchitecturalDiagram](https://user-images.githubusercontent.com/1351502/82133477-397fe780-980a-11ea-941a-aad6022951cd.PNG)
 
 ## Run the project
-This project expect you to have globally installed [Lerna](https://lerna.js.org/).</br>
+This project expect that you have globally installed [Lerna](https://lerna.js.org/).</br>
 execute `lerna bootstrap` from root folder.<br />
 execute `lerna run start`</br>
 (Or you can navigate to packges folder and `npm install` and `npm start` both 
