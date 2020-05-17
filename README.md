@@ -5,7 +5,8 @@ This project expect that you have globally installed [Lerna](https://lerna.js.or
 execute `lerna bootstrap` from root folder.<br />
 execute `lerna run start`</br>
 (Or you can navigate to packges folder and `npm install` and `npm start` both 
-be-server and client-app individually
+be-server and client-app individually</br>
+You can access the game from http://localhost:3002/
 
 ### Description
 
