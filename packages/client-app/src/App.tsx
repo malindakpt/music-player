@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { PlayerBase } from "./components/containerComponents/playerBase/PlayerBase";
+import { ErrorBoundary } from "./components/containerComponents/errorBoundary/ErrorBoundary";
 
 export const AppContext = React.createContext({
   currentSongIdx: -1,
@@ -10,7 +11,9 @@ function App() {
 
   return (
     <AppContext.Provider value={{ currentSongIdx, setCurrentSongIdx }}>
-      <PlayerBase />
+      <ErrorBoundary>
+        <PlayerBase />
+      </ErrorBoundary>
     </AppContext.Provider>
   );
 }

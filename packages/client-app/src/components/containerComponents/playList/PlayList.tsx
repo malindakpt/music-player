@@ -20,14 +20,21 @@ export const PlayList: React.FC<PlayListProps> = ({
 
   return (
     <div className={classes.container}>
-      {trackList.map((track, idx) => (
-        <PlayListEntry
-          key={track.id}
-          track={track}
-          onSelect={() => handleOnSelectSong(idx, track)}
-          isPlaying={context.currentSongIdx === idx}
-        />
-      ))}
+      {trackList.length > 0 ? (
+        trackList.map((track, idx) => (
+          <PlayListEntry
+            key={track.id}
+            track={track}
+            onSelect={() => handleOnSelectSong(idx, track)}
+            isPlaying={context.currentSongIdx === idx}
+          />
+        ))
+      ) : (
+        <div>
+          Failed to fetch the songs from BE. Please refresh the app once you
+          resolved the prooblems
+        </div>
+      )}
     </div>
   );
 };

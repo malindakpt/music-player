@@ -14,7 +14,10 @@ export const PlayerBase: React.FC = () => {
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_SONG_SERVER_ADDR}/playlist.json`)
-      .then((result) => setTrackList(result.data));
+      .then((result) => setTrackList(result.data))
+      .catch((e) => {
+        alert("Failed to connect to songs server");
+      });
   }, []);
 
   const [selectedTrack, setSelectedTrack] = useState<Track>();
