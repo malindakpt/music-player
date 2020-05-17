@@ -21,4 +21,4 @@ Playlist looping feature is added.<br>
 
 ### Notes
 
-Unit tests and storybook stories are not added due to time limitations.<br />
+`Unit tests` and `storybook stories` are not added due to time limitations.<br />
