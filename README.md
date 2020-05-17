@@ -17,7 +17,6 @@ There are two main compoents of this project.<br />
 ### Additional features of the application
 If backend is not available, an error is shown in playlist.</br>
 All the components are wrapped by ErrorBoundary component to handle unexpected error status.</br>
-Selected/Current playing song is highlighted in the playlist with blue background color.</br>
 
 ### Notes
 
