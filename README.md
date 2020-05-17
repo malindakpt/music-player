@@ -22,3 +22,4 @@ Playlist looping feature is added.<br>
 ### Notes
 
 `Unit tests` and `storybook stories` are not added due to time limitations.<br />
+`REACT_APP_SONG_SERVER_ADDR` variable in .env file can be used to connect application to different backend</be>
